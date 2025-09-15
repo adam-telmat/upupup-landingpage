@@ -1,0 +1,24 @@
+# Development files
+scripts/
+netlify/
+lighthouserc.json
+netlify.toml
+security-config.md
+PERFORMANCE-GUIDE.md
+
+# Test and build tools
+lighthouse-reports/
+seo-reports/
+node_modules/
+.npm/
+*.log
+
+# Development configs
+vite.config.ts
+security-headers.ts
+performance-optimization.ts
+seo-hypercharged.ts
+conversion-optimization.ts
+
+# Service worker (will be served from public/)
+public/sw.js

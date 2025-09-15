@@ -7,18 +7,7 @@
   "scripts": {
     "dev": "vite --host",
     "build": "tsc && vite build",
-    "preview": "vite preview --host",
-    "lighthouse": "lhci autorun",
-    "lighthouse:desktop": "lighthouse http://localhost:4173 --preset=desktop --output=html --output-path=./lighthouse-reports/desktop.html",
-    "lighthouse:mobile": "lighthouse http://localhost:4173 --preset=mobile --output=html --output-path=./lighthouse-reports/mobile.html",
-    "analyze": "npm run build && npx vite-bundle-analyzer dist/stats.json",
-    "test:performance": "npm run build && npm run preview & sleep 5 && npm run lighthouse && kill %1",
-    "security:audit": "npm audit --audit-level=moderate",
-    "security:headers": "node scripts/test-security-headers.js",
-    "seo:test": "node scripts/seo-test.js",
-    "optimize": "npm run build && npm run lighthouse && npm run analyze",
-    "deploy:netlify": "netlify deploy --prod --dir=dist",
-    "deploy:preview": "netlify deploy --dir=dist"
+    "preview": "vite preview --host"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -34,14 +23,7 @@
     "vite": "^5.0.8",
     "tailwindcss": "^3.4.0",
     "autoprefixer": "^10.4.16",
-    "postcss": "^8.4.32",
-    "@lighthouse-ci/cli": "^0.12.0",
-    "rollup-plugin-visualizer": "^5.12.0",
-    "vite-bundle-analyzer": "^0.7.0",
-    "cssnano": "^6.0.2",
-    "terser": "^5.26.0",
-    "netlify-cli": "^17.10.1",
-    "lighthouse": "^11.4.0"
+    "postcss": "^8.4.32"
   },
   "engines": {
     "node": ">=18.0.0",
