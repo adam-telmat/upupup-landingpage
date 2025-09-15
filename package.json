@@ -1,0 +1,82 @@
+{
+  "name": "casus-landing-hypercharged",
+  "private": true,
+  "version": "2.0.0",
+  "description": "Landing page ultra-optimisée pour Casus - IA Fiscale (Niveau 900 IQ)",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "tsc && vite build",
+    "preview": "vite preview --host",
+    "lighthouse": "lhci autorun",
+    "lighthouse:desktop": "lighthouse http://localhost:4173 --preset=desktop --output=html --output-path=./lighthouse-reports/desktop.html",
+    "lighthouse:mobile": "lighthouse http://localhost:4173 --preset=mobile --output=html --output-path=./lighthouse-reports/mobile.html",
+    "analyze": "npm run build && npx vite-bundle-analyzer dist/stats.json",
+    "test:performance": "npm run build && npm run preview & sleep 5 && npm run lighthouse && kill %1",
+    "security:audit": "npm audit --audit-level=moderate",
+    "security:headers": "node scripts/test-security-headers.js",
+    "seo:test": "node scripts/seo-test.js",
+    "optimize": "npm run build && npm run lighthouse && npm run analyze",
+    "deploy:netlify": "netlify deploy --prod --dir=dist",
+    "deploy:preview": "netlify deploy --dir=dist"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "framer-motion": "^10.16.16",
+    "lucide-react": "^0.303.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@vitejs/plugin-react": "^4.2.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8",
+    "tailwindcss": "^3.4.0",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "@lighthouse-ci/cli": "^0.12.0",
+    "rollup-plugin-visualizer": "^5.12.0",
+    "vite-bundle-analyzer": "^0.7.0",
+    "cssnano": "^6.0.2",
+    "terser": "^5.26.0",
+    "netlify-cli": "^17.10.1",
+    "lighthouse": "^11.4.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "keywords": [
+    "casus",
+    "ia-fiscale",
+    "expert-comptable",
+    "landing-page",
+    "react",
+    "vite",
+    "typescript",
+    "performance",
+    "seo",
+    "conversion-optimization",
+    "hypercharged"
+  ],
+  "author": "Casus Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wearecasus/casus-landing"
+  },
+  "homepage": "https://casus-landing.com"
+}

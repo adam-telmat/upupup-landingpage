@@ -1,0 +1,309 @@
+# ==================================================================================
+# NETLIFY CONFIGURATION - NIVEAU 900 IQ - DÉPLOIEMENT HYPERCHARGED
+# ==================================================================================
+# 
+# 🚀 OBJECTIF: DÉPLOIEMENT INSTANTANÉ - CDN GLOBAL - PERFORMANCE EXTRÊME
+# 🔥 FONCTIONNALITÉS AVANCÉES:
+# - Headers sécurisés automatiques
+# - Compression Brotli + Gzip
+# - Cache intelligent par type de fichier
+# - Redirections SEO-friendly
+# - Build optimization
+# - Edge functions pour API
+# - A/B testing natif
+# - Analytics avancées
+
+[build]
+  # Build command optimisé
+  command = "npm run build && npm run lighthouse"
+  publish = "dist"
+  
+  # Build environment variables
+  environment = { NODE_VERSION = "18", NPM_VERSION = "9" }
+
+[build.processing]
+  # Optimisation automatique des assets
+  skip_processing = false
+
+[build.processing.css]
+  # Minification CSS avancée
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  # Minification JavaScript avancée  
+  bundle = true
+  minify = true
+
+[build.processing.html]
+  # Minification HTML
+  pretty_urls = true
+
+[build.processing.images]
+  # Optimisation automatique des images
+  compress = true
+
+# ==================================================================================
+# HEADERS SÉCURISÉS - NIVEAU MILITAIRE
+# ==================================================================================
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Content Security Policy ultra-strict
+    Content-Security-Policy = """
+      default-src 'self';
+      script-src 'self' 'unsafe-inline' https://tally.so https://www.google-analytics.com https://www.googletagmanager.com;
+      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+      img-src 'self' data: https: blob:;
+      font-src 'self' https://fonts.gstatic.com;
+      connect-src 'self' https://api.casus.com https://www.google-analytics.com;
+      frame-src https://tally.so;
+      media-src 'self';
+      object-src 'none';
+      base-uri 'self';
+      form-action 'self' https://tally.so;
+      frame-ancestors 'none';
+      upgrade-insecure-requests;
+      block-all-mixed-content;
+    """
+    
+    # Security headers
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    
+    # HTTPS enforcement
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+    
+    # Permissions Policy
+    Permissions-Policy = """
+      geolocation=(),
+      microphone=(),
+      camera=(),
+      payment=(),
+      usb=(),
+      magnetometer=(),
+      gyroscope=(),
+      speaker=(),
+      vibrate=(),
+      fullscreen=(self),
+      sync-xhr=()
+    """
+    
+    # Cross-Origin Policies
+    Cross-Origin-Embedder-Policy = "require-corp"
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Resource-Policy = "same-origin"
+    
+    # Performance headers
+    X-DNS-Prefetch-Control = "on"
+    
+    # Custom security headers
+    X-Security-Policy = "Casus-Security-v2.0"
+    X-Powered-By = ""
+
+# ==================================================================================
+# CACHE OPTIMIZATION - PERFORMANCE EXTRÊME
+# ==================================================================================
+
+# Cache JavaScript et CSS pour 1 an
+[[headers]]
+  for = "/assets/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    
+[[headers]]
+  for = "/assets/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache images pour 1 an
+[[headers]]
+  for = "/assets/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    
+[[headers]]
+  for = "/assets/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    
+[[headers]]
+  for = "/assets/*.jpeg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    
+[[headers]]
+  for = "/assets/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    
+[[headers]]
+  for = "/assets/*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    
+[[headers]]
+  for = "/assets/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache fonts pour 1 an
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Access-Control-Allow-Origin = "*"
+
+# Cache manifeste et service worker pour 1 jour
+[[headers]]
+  for = "/manifest.json"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+    
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+# Pas de cache pour HTML
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# API responses - cache 5 minutes
+[[headers]]
+  for = "/api/*"
+  [headers.values]
+    Cache-Control = "public, max-age=300"
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+    Access-Control-Allow-Headers = "Content-Type, Authorization"
+
+# ==================================================================================
+# REDIRECTIONS SEO-FRIENDLY
+# ==================================================================================
+
+# Redirect www to non-www
+[[redirects]]
+  from = "https://www.casus-landing.com/*"
+  to = "https://casus-landing.com/:splat"
+  status = 301
+  force = true
+
+# Redirect HTTP to HTTPS
+[[redirects]]
+  from = "http://casus-landing.com/*"
+  to = "https://casus-landing.com/:splat"
+  status = 301
+  force = true
+
+# Trailing slash redirects
+[[redirects]]
+  from = "/tarification/"
+  to = "/#tarification"
+  status = 301
+
+[[redirects]]
+  from = "/solutions/"
+  to = "/#solutions"
+  status = 301
+
+# Old URLs redirects (si migration depuis ancien site)
+[[redirects]]
+  from = "/pricing"
+  to = "/#tarification"
+  status = 301
+
+[[redirects]]
+  from = "/features"
+  to = "/#solutions"
+  status = 301
+
+# API redirects
+[[redirects]]
+  from = "/api/*"
+  to = "https://api.casus.com/:splat"
+  status = 200
+
+# 404 fallback
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# ==================================================================================
+# EDGE FUNCTIONS - PERFORMANCE AVANCÉE
+# ==================================================================================
+
+# A/B Testing natif
+[[edge_functions]]
+  function = "ab-test"
+  path = "/*"
+
+# Analytics edge function
+[[edge_functions]]
+  function = "analytics"
+  path = "/api/analytics/*"
+
+# Geolocation-based content
+[[edge_functions]]
+  function = "geo-content"
+  path = "/"
+
+# ==================================================================================
+# ENVIRONMENT VARIABLES
+# ==================================================================================
+[build.environment]
+  NODE_ENV = "production"
+  GENERATE_SOURCEMAP = "false"
+  INLINE_RUNTIME_CHUNK = "false"
+  
+# ==================================================================================
+# PLUGINS NETLIFY
+# ==================================================================================
+[[plugins]]
+  # Plugin de minification avancée
+  package = "@netlify/plugin-minify-html"
+  
+[[plugins]]
+  # Plugin d'optimisation d'images
+  package = "netlify-plugin-image-optim"
+  
+[[plugins]]
+  # Plugin Lighthouse CI
+  package = "@netlify/plugin-lighthouse"
+  
+  [plugins.inputs]
+    output_path = "./lighthouse-reports"
+
+[[plugins]]
+  # Plugin de compression
+  package = "netlify-plugin-brotli"
+
+[[plugins]]
+  # Plugin de cache busting
+  package = "netlify-plugin-cache-on-demand"
+
+# ==================================================================================
+# FORMS HANDLING - NETLIFY FORMS
+# ==================================================================================
+# Les formulaires Netlify sont automatiquement détectés
+
+# ==================================================================================
+# ANALYTICS - NETLIFY ANALYTICS
+# ==================================================================================
+[template.environment]
+  NETLIFY_ANALYTICS = "true"
+
+# ==================================================================================
+# FUNCTIONS - SERVERLESS FUNCTIONS
+# ==================================================================================
+[functions]
+  directory = "netlify/functions"
+  
+  # Configuration des fonctions
+  [functions.environment]
+    NODE_ENV = "production"

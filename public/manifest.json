@@ -1,0 +1,167 @@
+{
+  "name": "Casus - IA Fiscale pour Experts-Comptables",
+  "short_name": "Casus IA",
+  "description": "L'IA qui libère 60% de votre temps de recherche fiscale. Automatisation intelligente pour experts-comptables.",
+  "version": "2.0.0",
+  "manifest_version": 3,
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#8B5CF6",
+  "background_color": "#0A0A0F",
+  "scope": "/",
+  "lang": "fr",
+  "dir": "ltr",
+  
+  "icons": [
+    {
+      "src": "/assets/logo-casus.jpeg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/assets/logo-casus.jpeg", 
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/logo-casus.jpeg",
+      "sizes": "144x144",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/assets/logo-casus.jpeg",
+      "sizes": "96x96", 
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/assets/logo-casus.jpeg",
+      "sizes": "72x72",
+      "type": "image/jpeg"
+    }
+  ],
+  
+  "screenshots": [
+    {
+      "src": "/assets/screenshot-desktop.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "platform": "wide",
+      "label": "Interface Casus sur desktop"
+    },
+    {
+      "src": "/assets/screenshot-mobile.jpg", 
+      "sizes": "375x667",
+      "type": "image/jpeg",
+      "platform": "narrow",
+      "label": "Interface Casus sur mobile"
+    }
+  ],
+  
+  "categories": ["business", "productivity", "finance"],
+  
+  "shortcuts": [
+    {
+      "name": "Nouvelle recherche fiscale",
+      "short_name": "Recherche",
+      "description": "Lancer une nouvelle recherche fiscale IA",
+      "url": "/recherche",
+      "icons": [
+        {
+          "src": "/assets/shortcut-search.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Mes consultations",
+      "short_name": "Consultations", 
+      "description": "Accéder à mes consultations générées",
+      "url": "/consultations",
+      "icons": [
+        {
+          "src": "/assets/shortcut-consultations.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Tarification",
+      "short_name": "Prix",
+      "description": "Voir les tarifs et s'abonner",
+      "url": "/#tarification",
+      "icons": [
+        {
+          "src": "/assets/shortcut-pricing.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  
+  "related_applications": [
+    {
+      "platform": "webapp",
+      "url": "https://wearecasus.co"
+    }
+  ],
+  
+  "prefer_related_applications": false,
+  
+  "protocol_handlers": [
+    {
+      "protocol": "mailto",
+      "url": "/contact?email=%s"
+    }
+  ],
+  
+  "file_handlers": [
+    {
+      "action": "/upload",
+      "accept": {
+        "application/pdf": [".pdf"],
+        "application/vnd.ms-excel": [".xls", ".xlsx"],
+        "text/csv": [".csv"]
+      }
+    }
+  ],
+  
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url",
+      "files": [
+        {
+          "name": "files",
+          "accept": ["application/pdf", "text/csv", "application/vnd.ms-excel"]
+        }
+      ]
+    }
+  },
+  
+  "permissions": [
+    "storage",
+    "notifications"
+  ],
+  
+  "features": [
+    {
+      "name": "Cross Platform",
+      "description": "Fonctionne sur tous les appareils"
+    },
+    {
+      "name": "Offline Support", 
+      "description": "Accès hors ligne aux données mises en cache"
+    },
+    {
+      "name": "Push Notifications",
+      "description": "Notifications pour les mises à jour importantes"
+    }
+  ]
+}
