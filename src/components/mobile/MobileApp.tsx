@@ -1,8 +1,7 @@
-import { useState, useEffect } from 'react';
 import type { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  ArrowRight, BarChart3, Star, CheckCircle2,
+  BarChart3, Star, CheckCircle2,
   FileText, Search, Brain, MessageCircle, Scale, ShieldCheck, Clock, Monitor
 } from 'lucide-react';
 
