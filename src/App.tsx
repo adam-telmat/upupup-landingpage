@@ -64,7 +64,7 @@ function App() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Essai 30 jours
+            Essayez gratuitement
           </motion.button>
         </div>
       </div>
@@ -121,10 +121,10 @@ function App() {
                 ))}
               </div>
               <p className="text-gray-300 italic mb-3">
-                "Casus nous fait gagner 3h/jour sur la recherche fiscale"
+                "Une capacité décuplée à modéliser, comparer, anticiper les conséquences fiscales de différentes options pour mes clients"
               </p>
               <div className="text-sm text-gray-400">
-                — Pierre M., Expert-Comptable, Cabinet Comptable Parisien
+                — Kadi SEYDI, Expert-Comptable, Beyond Numbers
               </div>
             </div>
             
@@ -647,16 +647,16 @@ function App() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
-              name: "Marie Dubois",
+              name: "Kadi SEYDI",
               role: "Expert-Comptable",
-              company: "Cabinet Dubois & Associés",
-              content: "Casus a révolutionné notre approche. 60% de temps économisé sur nos recherches fiscales.",
+              company: "Beyond Numbers",
+              content: "Depuis quelques mois, j'ai intégré Casus à ma pratique quotidienne d'expert-comptable. Il s'agit d'une IA spécialisée dans l'analyse fiscale. Résultat ? Une capacité décuplée à modéliser, comparer, anticiper les conséquences fiscales de différentes options pour mes clients. En quelques minutes, je peux aider mes clients à mieux comprendre les options qui s'offrent à eux, et surtout à saisir les risques et opportunités qui pointent à l'horizon. C'est rapide, clair et incroyablement pédagogique !",
               rating: 5
             },
             {
               name: "Jean Martin",
-              role: "Directeur Associé",
-              company: "Expertise Comptable Martin",
+              role: "Avocat Fiscaliste",
+              company: "Cabinet Martin & Associés",
               content: "L'IA de Casus nous permet de proposer un service premium à nos clients. Indispensable !",
               rating: 5
             },
