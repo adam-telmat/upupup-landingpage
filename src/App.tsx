@@ -3,7 +3,7 @@ import type { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import { 
   ArrowRight, BarChart3, Star, CheckCircle2,
-  FileText, Search, Brain, MessageCircle, Scale, ShieldCheck
+  FileText, Search, Brain, MessageCircle, Scale, ShieldCheck, Linkedin, Clock, Monitor
 } from 'lucide-react';
 
 function App() {
@@ -543,6 +543,79 @@ function App() {
   );
 
   // ==================================================================================
+  // AVANTAGES SECTION
+  // ==================================================================================
+  const AvantagesSection = () => (
+    <section className="py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,white_1px,transparent_0)] [background-size:80px_80px] animate-pulse" />
+        </div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="grid md:grid-cols-3 gap-8">
+          {/* Gain de temps */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-gray-800/50 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm"
+          >
+            <div className="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center mb-6">
+              <Clock className="w-6 h-6 text-white" />
+            </div>
+            <h3 className="text-2xl font-bold text-white mb-2">Gain de temps</h3>
+            <p className="text-gray-300 text-sm mb-4">(Libérez vos ressources et concentrez-vous sur l'essentiel.)</p>
+            <p className="text-gray-300">
+              Diminuez de 60 % le temps consacré aux recherches et à la rédaction de vos conseils fiscaux.
+            </p>
+          </motion.div>
+
+          {/* Sécurité & Conformité */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="bg-gray-800/50 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm"
+          >
+            <div className="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center mb-6">
+              <ShieldCheck className="w-6 h-6 text-white" />
+            </div>
+            <h3 className="text-2xl font-bold text-white mb-2">Sécurité & Conformité</h3>
+            <p className="text-gray-300 text-sm mb-4">(Recherchez en toute sécurité, garantissez votre conformité)</p>
+            <p className="text-gray-300">
+              Assurez la sécurité et la conformité de vos données avec notre infrastructure hébergée et protégée en France
+            </p>
+          </motion.div>
+
+          {/* Interface intuitive */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="bg-gray-800/50 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm"
+          >
+            <div className="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center mb-6">
+              <Monitor className="w-6 h-6 text-white" />
+            </div>
+            <h3 className="text-2xl font-bold text-white mb-2">Interface intuitive</h3>
+            <p className="text-gray-300 text-sm mb-4">(Une ergonomie pensée pour une utilisation simple et efficace)</p>
+            <p className="text-gray-300">
+              Profitez d'une plateforme ergonomique, conçue spécialement pour les professionnels exigeants.
+            </p>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+
+  // ==================================================================================
   // TÉMOIGNAGES SECTION
   // ==================================================================================
   const TemoignagesSection = () => (
@@ -638,8 +711,11 @@ function App() {
           </div>
           
           {/* Tagline */}
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-gray-300 mb-4">
             L'IA experte qui optimise vos conseils
+          </p>
+          <p className="text-gray-400 mb-8">
+            Chez Casus, nous sommes une équipe de professionnels du droit passionnés et de spécialistes de l'IA dont la mission est de révolutionner la façon dont les conseils fiscaux sont fournis
           </p>
           
           {/* Contact */}
@@ -650,7 +726,11 @@ function App() {
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition-colors flex items-center"
             >
-              <MessageCircle className="w-5 h-5 mr-2" />
+              <div className="w-5 h-5 mr-2 bg-[#0077B5] rounded flex items-center justify-center">
+                <svg className="w-3 h-3" viewBox="0 0 24 24" fill="white">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+              </div>
               LinkedIn
             </a>
             <a 
@@ -665,7 +745,7 @@ function App() {
           {/* Copyright */}
           <div className="pt-8 border-t border-gray-800">
             <p className="text-gray-500">
-              © 2024 Casus. Tous droits réservés.
+              © 2025 Casus. Tous droits réservés.
             </p>
           </div>
         </div>
@@ -735,6 +815,7 @@ function App() {
       <HeroSection />
       <TarificationSection />
       <SolutionsSection />
+      <AvantagesSection />
       <TemoignagesSection />
       <Footer />
       <StickyCTAButton />
