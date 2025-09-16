@@ -1,11 +1,39 @@
 import { useState, useEffect } from 'react';
+import type { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import { 
   ArrowRight, BarChart3, Star, CheckCircle2,
-  FileText, Search, Brain, MessageCircle
+  FileText, Search, Brain, MessageCircle, Scale, Calculator, PieChart, ShieldCheck, MessageSquare
 } from 'lucide-react';
 
 function App() {
+  type PlanetOrbitProps = {
+    radiusPx: number; // rayon vertical (semi-minor)
+    initialAngleDeg: number;
+    periodSec: number;
+    direction?: 1 | -1;
+    scaleX?: number; // élargissement horizontal (semi-major = radiusPx * scaleX)
+    scaleY?: number; // optionnel si on veut aussi comprimer verticalement
+    children: ReactNode;
+  };
+
+  const PlanetOrbit = ({ radiusPx, initialAngleDeg, periodSec, direction = 1, scaleX = 1, scaleY = 1, children }: PlanetOrbitProps) => (
+    <motion.div
+      className="absolute left-1/2 top-1/2"
+      style={{ transform: 'translate(-50%, -50%)' }}
+      animate={{ rotate: [initialAngleDeg, initialAngleDeg + 360 * direction] }}
+      transition={{ repeat: Infinity, repeatType: 'loop', ease: 'linear', duration: periodSec }}
+    >
+      {/* Scale crée une ellipse; on contre-scale le contenu pour garder la taille du logo */}
+      <div style={{ transform: `scale(${scaleX}, ${scaleY})` }}>
+        <div style={{ transform: `translateY(-${radiusPx}px)` }} className="relative">
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-30" style={{ transform: `translate(-50%, -50%) scale(${1/scaleX}, ${1/scaleY})` }}>
+            {children}
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
   // ==================================================================================
   // HEADER COMPONENT - NAVIGATION PRINCIPALE
   // ==================================================================================
@@ -133,166 +161,55 @@ function App() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex justify-center items-center"
+            className="flex justify-center items-center transform md:translate-x-6 lg:translate-x-12"
           >
-            <div className="relative w-[500px] h-[500px] lg:w-[600px] lg:h-[600px]">
-              {/* Logo Casus Central */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-20 h-20 lg:w-24 lg:h-24 rounded-full flex items-center justify-center bg-white/10 backdrop-blur-sm border border-white/20">
-                  <img 
-                    src="/logo-casus.jpeg" 
-                    alt="Casus" 
-                    className="w-16 h-16 lg:w-20 lg:h-20 rounded-full object-cover"
-                  />
-                </div>
-              </div>
+            <div className="relative w-[640px] h-[640px] lg:w-[760px] lg:h-[760px]">
+               {/* SOLEIL CENTRAL - LOGO CASUS AGRANDI SANS CERCLE */}
+               <div className="absolute inset-0 flex items-center justify-center">
+                 <img 
+                   src="/logo-casus.jpeg" 
+                   alt="Casus Soleil" 
+                   className="w-20 h-20 lg:w-24 lg:h-24 object-contain shadow-2xl shadow-purple-500/30"
+                 />
+               </div>
+ 
+               {/* Rails visibles rétablis (cercles parfaits) */}
+               <div className="absolute inset-0 flex items-center justify-center">
+                 <div className="relative">
+                   {/* Rail 1 */}
+                   <div style={{ transform: 'translate(-50%, -50%)', left: '50%', top: '50%' }} className="absolute">
+                     <div style={{ width: '280px', height: '280px' }} className="rounded-full border border-purple-500/30"></div>
+                   </div>
+                   {/* Rail 2 */}
+                   <div style={{ transform: 'translate(-50%, -50%)', left: '50%', top: '50%' }} className="absolute">
+                     <div style={{ width: '420px', height: '420px' }} className="rounded-full border border-purple-500/30"></div>
+                   </div>
+                   {/* Rail 3 */}
+                   <div style={{ transform: 'translate(-50%, -50%)', left: '50%', top: '50%' }} className="absolute">
+                     <div style={{ width: '560px', height: '560px' }} className="rounded-full border border-purple-500/30"></div>
+                   </div>
+                 </div>
+               </div>
               
-              {/* ORBITES MOBILES - VERSION MOBILE */}
-              {/* Logo 1 - Orbite 1 (100px radius) */}
-              <motion.div
-                className="absolute w-12 h-12 lg:hidden"
-                animate={{ rotate: 360 }}
-                transition={{
-                  duration: 25,
-                  repeat: Infinity,
-                  ease: "linear"
-                }}
-                style={{
-                  transformOrigin: "250px 250px",
-                  left: "150px",
-                  top: "250px"
-                }}
-              >
-                <div className="w-full h-full rounded-full bg-purple-500/20 backdrop-blur-sm border border-purple-500/40 flex items-center justify-center shadow-lg shadow-purple-500/25">
-                  <img 
-                    src="/logo-casus.jpeg" 
-                    alt="Casus" 
-                    className="w-8 h-8 rounded-full object-cover"
-                  />
+              {/* PLANÈTES EN ORBITE - ELLIPSES ÉLARGIES + STYLE DEMANDÉ */}
+              <PlanetOrbit radiusPx={140} initialAngleDeg={0} periodSec={18} direction={1} scaleX={1}>
+                <div className="w-14 h-14 rounded-full bg-black border border-white/10 flex items-center justify-center shadow-lg shadow-black/50">
+                  <Scale className="w-7 h-7 text-white" />
                 </div>
-              </motion.div>
-              
-              {/* Logo 2 - Orbite 2 (150px radius) - Reverse */}
-              <motion.div
-                className="absolute w-12 h-12 lg:hidden"
-                animate={{ rotate: -360 }}
-                transition={{
-                  duration: 18,
-                  repeat: Infinity,
-                  ease: "linear"
-                }}
-                style={{
-                  transformOrigin: "250px 250px",
-                  left: "100px",
-                  top: "250px"
-                }}
-              >
-                <div className="w-full h-full rounded-full bg-blue-500/20 backdrop-blur-sm border border-blue-500/40 flex items-center justify-center shadow-lg shadow-blue-500/25">
-                  <img 
-                    src="/logo-casus.jpeg" 
-                    alt="Casus" 
-                    className="w-8 h-8 rounded-full object-cover"
-                  />
+              </PlanetOrbit>
+
+              <PlanetOrbit radiusPx={210} initialAngleDeg={20} periodSec={30} direction={1} scaleX={1}>
+                <div className="w-14 h-14 flex items-center justify-center z-30">
+                  <img src="/logo-c-sun.jpeg" alt="Logo C Planète" className="w-12 h-12 object-contain" />
                 </div>
-              </motion.div>
-              
-              {/* Logo 3 - Orbite 3 (200px radius) */}
-              <motion.div
-                className="absolute w-12 h-12 lg:hidden"
-                animate={{ rotate: 360 }}
-                transition={{
-                  duration: 16,
-                  repeat: Infinity,
-                  ease: "linear"
-                }}
-                style={{
-                  transformOrigin: "250px 250px",
-                  left: "50px",
-                  top: "250px"
-                }}
-              >
-                <div className="w-full h-full rounded-full bg-green-500/20 backdrop-blur-sm border border-green-500/40 flex items-center justify-center shadow-lg shadow-green-500/25">
-                  <img 
-                    src="/logo-casus.jpeg" 
-                    alt="Casus" 
-                    className="w-8 h-8 rounded-full object-cover"
-                  />
+              </PlanetOrbit>
+
+              <PlanetOrbit radiusPx={280} initialAngleDeg={120} periodSec={42} direction={1} scaleX={1}>
+                <div className="w-14 h-14 rounded-full bg-black border border-white/10 flex items-center justify-center shadow-lg shadow-black/50">
+                  <ShieldCheck className="w-7 h-7 text-white" />
                 </div>
-              </motion.div>
-              
-              {/* ORBITES DESKTOP - VERSION DESKTOP */}
-              {/* Logo 1 - Orbite 1 (120px radius) */}
-              <motion.div
-                className="absolute w-14 h-14 hidden lg:block"
-                animate={{ rotate: 360 }}
-                transition={{
-                  duration: 25,
-                  repeat: Infinity,
-                  ease: "linear"
-                }}
-                style={{
-                  transformOrigin: "300px 300px",
-                  left: "180px",
-                  top: "300px"
-                }}
-              >
-                <div className="w-full h-full rounded-full bg-purple-500/20 backdrop-blur-sm border border-purple-500/40 flex items-center justify-center shadow-lg shadow-purple-500/25">
-                  <img 
-                    src="/logo-casus.jpeg" 
-                    alt="Casus" 
-                    className="w-10 h-10 rounded-full object-cover"
-                  />
-                </div>
-              </motion.div>
-              
-              {/* Logo 2 - Orbite 2 (180px radius) - Reverse */}
-              <motion.div
-                className="absolute w-14 h-14 hidden lg:block"
-                animate={{ rotate: -360 }}
-                transition={{
-                  duration: 18,
-                  repeat: Infinity,
-                  ease: "linear"
-                }}
-                style={{
-                  transformOrigin: "300px 300px",
-                  left: "120px",
-                  top: "300px"
-                }}
-              >
-                <div className="w-full h-full rounded-full bg-blue-500/20 backdrop-blur-sm border border-blue-500/40 flex items-center justify-center shadow-lg shadow-blue-500/25">
-                  <img 
-                    src="/logo-casus.jpeg" 
-                    alt="Casus" 
-                    className="w-10 h-10 rounded-full object-cover"
-                  />
-                </div>
-              </motion.div>
-              
-              {/* Logo 3 - Orbite 3 (240px radius) */}
-              <motion.div
-                className="absolute w-14 h-14 hidden lg:block"
-                animate={{ rotate: 360 }}
-                transition={{
-                  duration: 16,
-                  repeat: Infinity,
-                  ease: "linear"
-                }}
-                style={{
-                  transformOrigin: "300px 300px",
-                  left: "60px",
-                  top: "300px"
-                }}
-              >
-                <div className="w-full h-full rounded-full bg-green-500/20 backdrop-blur-sm border border-green-500/40 flex items-center justify-center shadow-lg shadow-green-500/25">
-                  <img 
-                    src="/logo-casus.jpeg" 
-                    alt="Casus" 
-                    className="w-10 h-10 rounded-full object-cover"
-                  />
-                </div>
-              </motion.div>
-            </div>
+              </PlanetOrbit>
+             </div>
           </motion.div>
         </div>
       </div>
@@ -334,10 +251,14 @@ function App() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            whileHover={{ scale: 1.02, boxShadow: "0 10px 40px rgba(168,85,247,0.15)" }}
+            transition={{ type: 'spring', stiffness: 260, damping: 20 }}
             className="bg-gray-800/50 border border-gray-700 rounded-2xl p-8 backdrop-blur-sm"
           >
-            <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>
-            <div className="text-4xl font-bold text-purple-400 mb-6">99€<span className="text-lg text-gray-400">/mois</span></div>
+            <h3 className="text-2xl font-bold text-white mb-1">Starter</h3>
+            <div className="text-gray-300 mb-4">Pour un usage modéré</div>
+            <div className="text-5xl font-bold text-white mb-1">€99</div>
+            <div className="text-sm text-purple-300 mb-6">/mois/utilisateur (HT)</div>
             <ul className="space-y-3 mb-8">
               <li className="flex items-center text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-green-400 mr-3" />
@@ -346,6 +267,18 @@ function App() {
               <li className="flex items-center text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-green-400 mr-3" />
                 10 consultations automatisées
+              </li>
+              <li className="flex items-center text-gray-300">
+                <CheckCircle2 className="w-5 h-5 text-green-400 mr-3" />
+                Casus Genius illimité
+              </li>
+              <li className="flex items-center text-gray-300">
+                <CheckCircle2 className="w-5 h-5 text-green-400 mr-3" />
+                Historique des requêtes en ligne (pas de téléchargement ou d'exportation)
+              </li>
+              <li className="flex items-center text-gray-300">
+                <CheckCircle2 className="w-5 h-5 text-green-400 mr-3" />
+                Support standard (réponse sous 48h)
               </li>
             </ul>
             <button className="w-full bg-purple-500 text-white py-3 rounded-lg font-semibold">
@@ -359,20 +292,23 @@ function App() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 border-2 border-purple-500 rounded-2xl p-8 backdrop-blur-sm relative transform scale-105"
+            whileHover={{ scale: 1.03, boxShadow: "0 10px 50px rgba(168,85,247,0.25)" }}
+            className="bg-gradient-to-br from-purple-500/15 to-blue-500/10 border-2 border-purple-500 rounded-2xl p-8 backdrop-blur-sm relative"
           >
-            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-              <div className="bg-gradient-to-r from-red-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-bold">
-                1 MOIS OFFERT
+            <div className="absolute top-4 right-4">
+              <div className="bg-purple-600/80 text-white px-3 py-1 rounded-full text-xs font-bold">
+                Recommandé
               </div>
             </div>
             
-            <h3 className="text-2xl font-bold text-white mb-4">Pro</h3>
-            <div className="flex items-center mb-6">
-              <div className="text-4xl font-bold text-gray-500 line-through mr-4">149€</div>
-              <div className="text-4xl font-bold text-green-400">0€</div>
-              <span className="text-lg text-gray-400 ml-2">/1er mois</span>
+            <h3 className="text-2xl font-bold text-white mb-1">Pro</h3>
+            <div className="text-gray-300 mb-4">Pour les utilisateurs réguliers</div>
+            <div className="flex items-baseline mb-1">
+              <div className="text-5xl font-bold text-white mr-3 line-through opacity-80">€149</div>
+              <div className="text-green-400 font-semibold">1 mois offert</div>
             </div>
+            <div className="text-sm text-purple-200 mb-2">/mois/utilisateur (HT)</div>
+            <div className="text-xs text-gray-400 mb-6">sans engagement — en 1 clic</div>
             <ul className="space-y-3 mb-8">
               <li className="flex items-center text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-green-400 mr-3" />
@@ -384,7 +320,15 @@ function App() {
               </li>
               <li className="flex items-center text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-green-400 mr-3" />
-                Support prioritaire (24h)
+                Casus Genius illimité
+              </li>
+              <li className="flex items-center text-gray-300">
+                <CheckCircle2 className="w-5 h-5 text-green-400 mr-3" />
+                Historique des requêtes exportable en Word ou PDF
+              </li>
+              <li className="flex items-center text-gray-300">
+                <CheckCircle2 className="w-5 h-5 text-green-400 mr-3" />
+                Support prioritaire (réponse sous 24h)
               </li>
             </ul>
             <button className="w-full bg-gradient-to-r from-purple-500 to-purple-600 text-white py-3 rounded-lg font-bold">
@@ -398,10 +342,13 @@ function App() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
+            whileHover={{ scale: 1.02, boxShadow: "0 10px 40px rgba(59,130,246,0.15)" }}
             className="bg-gray-800/50 border border-gray-700 rounded-2xl p-8 backdrop-blur-sm"
           >
-            <h3 className="text-2xl font-bold text-white mb-4">Business</h3>
+            <h3 className="text-2xl font-bold text-white mb-1">Business</h3>
+            <div className="text-gray-300 mb-4">Pour les équipes et les professionnels exigeants</div>
             <div className="text-4xl font-bold text-blue-400 mb-6">Sur mesure</div>
+            <p className="text-gray-300 mb-8">Prenez rendez-vous avec l'un de nos experts, établissez un devis sur mesure en fonction de vos besoins</p>
             <ul className="space-y-3 mb-8">
               <li className="flex items-center text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-green-400 mr-3" />
@@ -755,7 +702,7 @@ function App() {
       >
         <motion.button
           onClick={scrollToTarification}
-          className="bg-gradient-to-r from-purple-500 to-purple-600 text-white px-6 py-4 rounded-full font-bold shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 transition-all duration-300 flex items-center space-x-2 relative overflow-hidden"
+          className="bg-gradient-to-r from-purple-500 to-purple-600 text-white px-7 py-4 rounded-full font-bold shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 transition-all duration-300 flex items-center space-x-2 relative overflow-hidden"
           whileHover={{ 
             scale: 1.05,
             boxShadow: "0 0 30px rgba(168, 85, 247, 0.6)"
@@ -772,7 +719,7 @@ function App() {
             boxShadow: { duration: 2, repeat: Infinity }
           }}
         >
-          <span>1 mois offert</span>
+          <span>Tester votre mois offert — sans engagement</span>
           <ArrowRight className="w-5 h-5" />
         </motion.button>
       </motion.div>
