@@ -3,7 +3,7 @@ import type { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import { 
   ArrowRight, BarChart3, Star, CheckCircle2,
-  FileText, Search, Brain, MessageCircle, Scale, ShieldCheck, Linkedin, Clock, Monitor
+  FileText, Search, Brain, MessageCircle, Scale, ShieldCheck, Clock, Monitor
 } from 'lucide-react';
 
 function App() {
