@@ -15,29 +15,29 @@
   
   "icons": [
     {
-      "src": "/assets/logo-casus.jpeg",
+      "src": "/logo-casus.jpeg",
       "sizes": "192x192",
       "type": "image/jpeg",
       "purpose": "maskable"
     },
     {
-      "src": "/assets/logo-casus.jpeg", 
+      "src": "/logo-casus.jpeg", 
       "sizes": "512x512",
       "type": "image/jpeg",
       "purpose": "any"
     },
     {
-      "src": "/assets/logo-casus.jpeg",
+      "src": "/logo-casus.jpeg",
       "sizes": "144x144",
       "type": "image/jpeg"
     },
     {
-      "src": "/assets/logo-casus.jpeg",
+      "src": "/logo-casus.jpeg",
       "sizes": "96x96", 
       "type": "image/jpeg"
     },
     {
-      "src": "/assets/logo-casus.jpeg",
+      "src": "/logo-casus.jpeg",
       "sizes": "72x72",
       "type": "image/jpeg"
     }

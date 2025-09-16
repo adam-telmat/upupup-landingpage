@@ -16,7 +16,7 @@ function App() {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <img 
-              src="/assets/logo-casus.jpeg" 
+              src="/logo-casus.jpeg" 
               alt="Casus Logo" 
               className="w-auto h-8 object-contain"
             />
@@ -140,7 +140,7 @@ function App() {
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-20 h-20 lg:w-24 lg:h-24 rounded-full flex items-center justify-center bg-white/10 backdrop-blur-sm border border-white/20">
                   <img 
-                    src="/assets/logo-casus.jpeg" 
+                    src="/logo-casus.jpeg" 
                     alt="Casus" 
                     className="w-16 h-16 lg:w-20 lg:h-20 rounded-full object-cover"
                   />
@@ -165,7 +165,7 @@ function App() {
               >
                 <div className="w-full h-full rounded-full bg-purple-500/20 backdrop-blur-sm border border-purple-500/40 flex items-center justify-center shadow-lg shadow-purple-500/25">
                   <img 
-                    src="/assets/logo-casus.jpeg" 
+                    src="/logo-casus.jpeg" 
                     alt="Casus" 
                     className="w-8 h-8 rounded-full object-cover"
                   />
@@ -189,7 +189,7 @@ function App() {
               >
                 <div className="w-full h-full rounded-full bg-blue-500/20 backdrop-blur-sm border border-blue-500/40 flex items-center justify-center shadow-lg shadow-blue-500/25">
                   <img 
-                    src="/assets/logo-casus.jpeg" 
+                    src="/logo-casus.jpeg" 
                     alt="Casus" 
                     className="w-8 h-8 rounded-full object-cover"
                   />
@@ -213,7 +213,7 @@ function App() {
               >
                 <div className="w-full h-full rounded-full bg-green-500/20 backdrop-blur-sm border border-green-500/40 flex items-center justify-center shadow-lg shadow-green-500/25">
                   <img 
-                    src="/assets/logo-casus.jpeg" 
+                    src="/logo-casus.jpeg" 
                     alt="Casus" 
                     className="w-8 h-8 rounded-full object-cover"
                   />
@@ -238,7 +238,7 @@ function App() {
               >
                 <div className="w-full h-full rounded-full bg-purple-500/20 backdrop-blur-sm border border-purple-500/40 flex items-center justify-center shadow-lg shadow-purple-500/25">
                   <img 
-                    src="/assets/logo-casus.jpeg" 
+                    src="/logo-casus.jpeg" 
                     alt="Casus" 
                     className="w-10 h-10 rounded-full object-cover"
                   />
@@ -262,7 +262,7 @@ function App() {
               >
                 <div className="w-full h-full rounded-full bg-blue-500/20 backdrop-blur-sm border border-blue-500/40 flex items-center justify-center shadow-lg shadow-blue-500/25">
                   <img 
-                    src="/assets/logo-casus.jpeg" 
+                    src="/logo-casus.jpeg" 
                     alt="Casus" 
                     className="w-10 h-10 rounded-full object-cover"
                   />
@@ -286,7 +286,7 @@ function App() {
               >
                 <div className="w-full h-full rounded-full bg-green-500/20 backdrop-blur-sm border border-green-500/40 flex items-center justify-center shadow-lg shadow-green-500/25">
                   <img 
-                    src="/assets/logo-casus.jpeg" 
+                    src="/logo-casus.jpeg" 
                     alt="Casus" 
                     className="w-10 h-10 rounded-full object-cover"
                   />
@@ -684,7 +684,7 @@ function App() {
           {/* Logo */}
           <div className="flex justify-center mb-6">
             <img 
-              src="/assets/logo-casus.jpeg" 
+              src="/logo-casus.jpeg" 
               alt="Casus Logo" 
               className="w-auto h-12 object-contain"
             />

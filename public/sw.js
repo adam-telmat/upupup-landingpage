@@ -40,7 +40,7 @@ const CACHE_STRATEGIES = {
 // Ressources critiques à preloader IMMÉDIATEMENT
 const CRITICAL_RESOURCES = [
   '/',
-  '/assets/logo-casus.jpeg',
+  '/logo-casus.jpeg',
   '/src/main.tsx',
   'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
 ]
@@ -401,7 +401,7 @@ async function doBackgroundSync() {
 self.addEventListener('push', event => {
   const options = {
     body: event.data ? event.data.text() : 'Nouvelle mise à jour disponible',
-    icon: '/assets/logo-casus.jpeg',
+    icon: '/logo-casus.jpeg',
     badge: '/assets/badge-icon.png',
     vibrate: [100, 50, 100],
     data: {
