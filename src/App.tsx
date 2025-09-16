@@ -93,14 +93,14 @@ function App() {
       </div>
       
       <div className="max-w-7xl mx-auto px-6 py-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
           {/* Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
+            <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-6 sm:mb-8 leading-tight">
               L'IA fiscale qui libère{' '}
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 60% de votre temps
@@ -108,7 +108,7 @@ function App() {
               de recherche.
             </h1>
             
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+            <p className="text-base xs:text-lg sm:text-xl md:text-2xl text-gray-300 mb-6 sm:mb-8 leading-relaxed">
               Automatisez vos recherches fiscales et générez des consultations expertes en quelques minutes. 
               La solution IA conçue spécifiquement pour les experts-comptables français.
             </p>
@@ -163,7 +163,7 @@ function App() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex justify-center items-center transform md:translate-x-6 lg:translate-x-12"
           >
-            <div className="relative w-[640px] h-[640px] lg:w-[760px] lg:h-[760px]">
+            <div className="relative w-[300px] h-[300px] xs:w-[400px] xs:h-[400px] sm:w-[500px] sm:h-[500px] md:w-[600px] md:h-[600px] lg:w-[700px] lg:h-[700px] xl:w-[800px] xl:h-[800px]">
                {/* SOLEIL CENTRAL - LOGO CASUS AGRANDI SANS CERCLE */}
                <div className="absolute inset-0 flex items-center justify-center">
                  <img 
@@ -178,35 +178,35 @@ function App() {
                  <div className="relative">
                    {/* Rail 1 */}
                    <div style={{ transform: 'translate(-50%, -50%)', left: '50%', top: '50%' }} className="absolute">
-                     <div style={{ width: '280px', height: '280px' }} className="rounded-full border border-purple-500/30"></div>
+                     <div className="rounded-full border border-purple-500/30 w-[140px] h-[140px] xs:w-[180px] xs:h-[180px] sm:w-[220px] sm:h-[220px] md:w-[260px] md:h-[260px] lg:w-[300px] lg:h-[300px] xl:w-[340px] xl:h-[340px]"></div>
                    </div>
                    {/* Rail 2 */}
                    <div style={{ transform: 'translate(-50%, -50%)', left: '50%', top: '50%' }} className="absolute">
-                     <div style={{ width: '420px', height: '420px' }} className="rounded-full border border-purple-500/30"></div>
+                     <div className="rounded-full border border-purple-500/30 w-[210px] h-[210px] xs:w-[270px] xs:h-[270px] sm:w-[330px] sm:h-[330px] md:w-[390px] md:h-[390px] lg:w-[450px] lg:h-[450px] xl:w-[510px] xl:h-[510px]"></div>
                    </div>
                    {/* Rail 3 */}
                    <div style={{ transform: 'translate(-50%, -50%)', left: '50%', top: '50%' }} className="absolute">
-                     <div style={{ width: '560px', height: '560px' }} className="rounded-full border border-purple-500/30"></div>
+                     <div className="rounded-full border border-purple-500/30 w-[280px] h-[280px] xs:w-[360px] xs:h-[360px] sm:w-[440px] sm:h-[440px] md:w-[520px] md:h-[520px] lg:w-[600px] lg:h-[600px] xl:w-[680px] xl:h-[680px]"></div>
                    </div>
                  </div>
                </div>
               
               {/* PLANÈTES EN ORBITE - ELLIPSES ÉLARGIES + STYLE DEMANDÉ */}
-              <PlanetOrbit radiusPx={140} initialAngleDeg={0} periodSec={18} direction={1} scaleX={1}>
-                <div className="w-14 h-14 rounded-full bg-black border border-white/10 flex items-center justify-center shadow-lg shadow-black/50">
-                  <Scale className="w-7 h-7 text-white" />
+              <PlanetOrbit radiusPx={70} initialAngleDeg={0} periodSec={18} direction={1} scaleX={1}>
+                <div className="w-8 h-8 xs:w-10 xs:h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-black border border-white/10 flex items-center justify-center shadow-lg shadow-black/50">
+                  <Scale className="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-white" />
                 </div>
               </PlanetOrbit>
 
-              <PlanetOrbit radiusPx={210} initialAngleDeg={20} periodSec={30} direction={1} scaleX={1}>
-                <div className="w-14 h-14 flex items-center justify-center z-30">
-                  <img src="/logo-c-sun.jpeg" alt="Logo C Planète" className="w-12 h-12 object-contain" />
+              <PlanetOrbit radiusPx={105} initialAngleDeg={20} periodSec={30} direction={1} scaleX={1}>
+                <div className="w-8 h-8 xs:w-10 xs:h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 flex items-center justify-center z-30">
+                  <img src="/logo-c-sun.jpeg" alt="Logo C Planète" className="w-6 h-6 xs:w-8 xs:h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 object-contain" />
                 </div>
               </PlanetOrbit>
 
-              <PlanetOrbit radiusPx={280} initialAngleDeg={120} periodSec={42} direction={1} scaleX={1}>
-                <div className="w-14 h-14 rounded-full bg-black border border-white/10 flex items-center justify-center shadow-lg shadow-black/50">
-                  <ShieldCheck className="w-7 h-7 text-white" />
+              <PlanetOrbit radiusPx={140} initialAngleDeg={120} periodSec={42} direction={1} scaleX={1}>
+                <div className="w-8 h-8 xs:w-10 xs:h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-black border border-white/10 flex items-center justify-center shadow-lg shadow-black/50">
+                  <ShieldCheck className="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-white" />
                 </div>
               </PlanetOrbit>
              </div>
@@ -778,29 +778,30 @@ function App() {
       <motion.div
         initial={{ opacity: 0, x: 100 }}
         animate={{ opacity: 1, x: 0 }}
-        className="fixed right-6 top-1/2 transform -translate-y-1/2 z-50"
+        className="fixed right-[80px] top-1/2 transform -translate-y-1/2 z-50 hidden xl:block"
       >
         <motion.button
           onClick={scrollToTarification}
-          className="bg-gradient-to-r from-purple-500 to-purple-600 text-white px-7 py-4 rounded-full font-bold shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 transition-all duration-300 flex items-center space-x-2 relative overflow-hidden"
+          className="bg-gradient-to-r from-purple-500 to-purple-600 text-white px-4 py-3 sm:px-6 sm:py-5 rounded-full font-bold shadow-xl shadow-purple-500/40 hover:shadow-purple-500/60 transition-all duration-300 flex flex-col items-center space-y-1 relative overflow-hidden max-w-[160px] sm:max-w-[200px] lg:max-w-[220px] border-2 border-purple-400/30"
           whileHover={{ 
-            scale: 1.05,
-            boxShadow: "0 0 30px rgba(168, 85, 247, 0.6)"
+            scale: 1.08,
+            boxShadow: "0 0 40px rgba(168, 85, 247, 0.8)"
           }}
           whileTap={{ scale: 0.95 }}
           animate={{
             boxShadow: [
-              "0 0 20px rgba(168, 85, 247, 0.3)",
-              "0 0 30px rgba(168, 85, 247, 0.5)",
-              "0 0 20px rgba(168, 85, 247, 0.3)"
+              "0 0 25px rgba(168, 85, 247, 0.4)",
+              "0 0 35px rgba(168, 85, 247, 0.6)",
+              "0 0 25px rgba(168, 85, 247, 0.4)"
             ]
           }}
           transition={{
             boxShadow: { duration: 2, repeat: Infinity }
           }}
         >
-          <span>Tester votre mois offert — sans engagement</span>
-          <ArrowRight className="w-5 h-5" />
+          <span className="text-xs sm:text-sm leading-tight font-bold">Testez votre mois offert</span>
+          <span className="text-[10px] sm:text-xs opacity-95 font-medium">— sans engagement</span>
+          <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 mt-1" />
         </motion.button>
       </motion.div>
     );
