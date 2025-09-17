@@ -1,8 +1,8 @@
 {
-  "name": "casus-landing-hypercharged",
+  "name": "upupup-landingpage",
   "private": true,
-  "version": "2.0.0",
-  "description": "Landing page ultra-optimisée pour Casus - IA Fiscale (Niveau 900 IQ)",
+  "version": "1.0.0",
+  "description": "Landing page UP UP UP - Automatisation et Growth Marketing",
   "type": "module",
   "scripts": {
     "dev": "vite --host",
@@ -43,23 +43,24 @@
     ]
   },
   "keywords": [
-    "casus",
-    "ia-fiscale",
-    "expert-comptable",
+    "upupup",
+    "growth-marketing",
+    "automatisation",
+    "prospection",
+    "conseil-commercial",
     "landing-page",
     "react",
     "vite",
     "typescript",
     "performance",
     "seo",
-    "conversion-optimization",
-    "hypercharged"
+    "conversion-optimization"
   ],
-  "author": "Casus Team",
+  "author": "UP UP UP Team",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wearecasus/casus-landing"
+    "url": "https://github.com/adam-telmat/casus_landingpage-test"
   },
-  "homepage": "https://casus-landing.com"
+  "homepage": "https://upupup.pro"
 }
