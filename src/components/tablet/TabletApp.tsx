@@ -43,15 +43,15 @@ function TabletApp() {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <img 
-              src="/logo-casus.jpeg" 
-              alt="Casus Logo" 
-              className="w-auto h-8 object-contain"
+              src="/logo-upupupfinal.png" 
+              alt="UP UP UP Logo" 
+              className="w-auto h-15 object-contain"
             />
           </div>
           
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#solutions" className="text-gray-300 hover:text-white transition-colors">Solutions</a>
+            <a href="#services" className="text-gray-300 hover:text-white transition-colors">Services</a>
             <a href="#tarifs" className="text-gray-300 hover:text-white transition-colors">Tarifs</a>
             <a href="#temoignages" className="text-gray-300 hover:text-white transition-colors">Témoignages</a>
             <a href="#contact" className="text-gray-300 hover:text-white transition-colors">Contact</a>
@@ -63,7 +63,7 @@ function TabletApp() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Essayez gratuitement
+            Audit gratuit
           </motion.button>
         </div>
       </div>
@@ -100,17 +100,15 @@ function TabletApp() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-2xl font-bold text-white mb-6 leading-tight px-4">
-              L'IA fiscale qui libère{' '}
+            <h1 className="text-2xl font-bold text-white mb-6 leading-tight px-4 whitespace-pre-line">
+              Boostez vos performances et{' '}
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                60% de votre temps
-              </span>{' '}
-              de recherche.
+                passez&nbsp;à&nbsp;la&nbsp;vitesse<br />supérieure
+              </span>
             </h1>
             
             <p className="text-base text-gray-300 mb-6 leading-relaxed px-4">
-              Automatisez vos recherches fiscales et générez des consultations expertes en quelques minutes. 
-              La solution IA conçue spécifiquement pour les experts-comptables français.
+              <span className="text-purple-400 font-semibold">UP UP UP vous accompagne dans l'automatisation et le growth marketing</span> pour maximiser vos performances.
             </p>
             
             {/* Testimonial */}
@@ -121,10 +119,10 @@ function TabletApp() {
                 ))}
               </div>
               <p className="text-base text-gray-300 italic mb-3">
-                "Une capacité décuplée à modéliser, comparer, anticiper les conséquences fiscales de différentes options pour mes clients"
+                "UP UP UP nous a aidés à automatiser notre prospection et optimiser notre growth. De 50 leads/mois à 200+ leads qualifiés avec moins d'effort !"
               </p>
               <div className="text-sm text-gray-400">
-                — Kadi SEYDI, Expert-Comptable, Beyond Numbers
+                Marc Dubois, Fondateur, TechStart
               </div>
             </div>
             
@@ -135,23 +133,23 @@ function TabletApp() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Tester 1 mois offert — sans engagement
+                Automatisez et commencez à scaler dès maintenant
               </motion.button>
               
-              <p className="text-gray-400 text-sm">
-                Carte requise — aucun prélèvement avant la fin de l'essai
+              <p className="text-white text-base font-bold">
+                Accompagnement stratégique — 20 ans d'expérience
               </p>
             </div>
             
             {/* Metrics */}
             <div className="grid grid-cols-2 gap-6 mt-10">
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">60%</div>
-                <div className="text-base text-gray-300">Gain de temps</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">4x</div>
+                <div className="text-base text-gray-300">Plus de leads qualifiés</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400 mb-2">3 min</div>
-                <div className="text-base text-gray-300">Consultation générée</div>
+                <div className="text-3xl font-bold text-blue-400 mb-2">-60%</div>
+                <div className="text-base text-gray-300">De temps de prospection</div>
               </div>
             </div>
           </motion.div>
@@ -164,12 +162,12 @@ function TabletApp() {
             className="flex justify-center items-center transform md:translate-x-6 lg:translate-x-12"
           >
             <div className="relative w-[500px] h-[500px]">
-               {/* SOLEIL CENTRAL - LOGO CASUS DIRECT */}
+               {/* SOLEIL CENTRAL - LOGO UP UP UP DIRECT */}
                <div className="absolute inset-0 flex items-center justify-center">
                  <img 
-                   src="/logo-casus.jpeg" 
-                   alt="Casus Soleil" 
-                   className="w-16 h-16 object-contain"
+                   src="/logo-upupupfinal.png" 
+                   alt="UP UP UP Soleil" 
+                   className="w-24 h-24 object-contain"
                  />
                </div>
  
@@ -194,19 +192,19 @@ function TabletApp() {
               {/* PLANÈTES EN ORBITE - ELLIPSES ÉLARGIES + STYLE DEMANDÉ */}
               <PlanetOrbit radiusPx={100} initialAngleDeg={0} periodSec={18} direction={1} scaleX={1}>
                 <div className="w-12 h-12 rounded-full bg-black border border-white/10 flex items-center justify-center shadow-lg shadow-black/50">
-                  <Scale className="w-6 h-6 text-white" />
+                  <BarChart3 className="w-6 h-6 text-white" />
                 </div>
               </PlanetOrbit>
 
               <PlanetOrbit radiusPx={150} initialAngleDeg={20} periodSec={30} direction={1} scaleX={1}>
                 <div className="w-12 h-12 flex items-center justify-center z-30">
-                  <img src="/logo-c-sun.jpeg" alt="Logo C Planète" className="w-10 h-10 object-contain" />
+                  <img src="/upupup-logocoupe-removebg-preview.png" alt="Logo UP UP UP Planète" className="w-10 h-10 object-contain" />
                 </div>
               </PlanetOrbit>
 
               <PlanetOrbit radiusPx={200} initialAngleDeg={120} periodSec={42} direction={1} scaleX={1}>
                 <div className="w-12 h-12 rounded-full bg-black border border-white/10 flex items-center justify-center shadow-lg shadow-black/50">
-                  <ShieldCheck className="w-6 h-6 text-white" />
+                  <Brain className="w-6 h-6 text-white" />
                 </div>
               </PlanetOrbit>
              </div>
@@ -238,15 +236,15 @@ function TabletApp() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Tarifs transparents
+            Nos offres d'externalisation
           </h2>
           <p className="text-xl text-gray-300">
-            Choisissez l'offre qui correspond à vos besoins
+            Des solutions flexibles et rentables pour votre prospection commerciale
           </p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {/* Starter */}
+          {/* Prospection Téléphonique */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -255,38 +253,38 @@ function TabletApp() {
             transition={{ type: 'spring', stiffness: 260, damping: 20 }}
             className="bg-gray-800/50 border border-gray-700 rounded-2xl p-8 backdrop-blur-sm"
           >
-            <h3 className="text-2xl font-bold text-white mb-1">Starter</h3>
-            <div className="text-gray-300 mb-4">Pour un usage modéré</div>
-            <div className="text-5xl font-bold text-white mb-1">€99</div>
-            <div className="text-sm text-purple-300 mb-6">/mois/utilisateur (HT)</div>
+            <h3 className="text-2xl font-bold text-white mb-1">Prospection Téléphonique</h3>
+            <div className="text-gray-300 mb-4">Le canal incontournable en B to B</div>
+            <div className="text-5xl font-bold text-white mb-1">Sur devis</div>
+            <div className="text-sm text-purple-300 mb-6">Contrat court de 3 mois</div>
             <ul className="space-y-3 mb-8">
               <li className="flex items-center text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-green-400 mr-3" />
-                30 recherches fiscales / mois
+                400 à 800 appels mensuels ciblés
               </li>
               <li className="flex items-center text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-green-400 mr-3" />
-                10 consultations automatisées
+                Business developer dédié basé en France
               </li>
               <li className="flex items-center text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-green-400 mr-3" />
-                Casus Genius illimité
+                Reporting hebdomadaire de 30 min
               </li>
               <li className="flex items-center text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-green-400 mr-3" />
-                Historique des requêtes en ligne (pas de téléchargement ou d'exportation)
+                Reporting stratégique mensuel de 1h
               </li>
               <li className="flex items-center text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-green-400 mr-3" />
-                Support standard (réponse sous 48h)
+                Démarrage en 4 semaines
               </li>
             </ul>
             <button className="w-full bg-purple-500 text-white py-3 rounded-lg font-semibold">
-              Choisir Starter
+              Demander un devis
             </button>
           </motion.div>
 
-          {/* Pro - Recommandé avec 1 MOIS OFFERT */}
+          {/* Conseil Commercial - Recommandé */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -295,48 +293,40 @@ function TabletApp() {
             whileHover={{ scale: 1.03, boxShadow: "0 10px 50px rgba(168,85,247,0.25)" }}
             className="bg-gradient-to-br from-purple-500/15 to-blue-500/10 border-2 border-purple-500 rounded-2xl p-8 backdrop-blur-sm relative"
           >
-            <div className="absolute top-4 right-4">
-              <div className="bg-purple-600/80 text-white px-3 py-1 rounded-full text-xs font-bold">
-                Recommandé
-              </div>
-            </div>
             
-            <h3 className="text-2xl font-bold text-white mb-1">Pro</h3>
-            <div className="text-gray-300 mb-4">Pour les utilisateurs réguliers</div>
-            <div className="flex items-baseline mb-1">
-              <div className="text-5xl font-bold text-white mr-3 line-through opacity-80">€149</div>
-              <div className="text-green-400 font-semibold">1 mois offert</div>
-            </div>
-            <div className="text-sm text-purple-200 mb-2">/mois/utilisateur (HT)</div>
-            <div className="text-xs text-gray-400 mb-6">sans engagement — en 1 clic</div>
+            <h3 className="text-2xl font-bold text-white mb-1">Conseil Commercial</h3>
+            <div className="text-gray-300 mb-4">Optimisation complète de votre process</div>
+            <div className="text-5xl font-bold text-white mb-1">Sur devis</div>
+            <div className="text-sm text-purple-200 mb-2">Audit + Stratégie + Déploiement</div>
+            <div className="text-xs text-gray-400 mb-6">Accompagnement personnalisé</div>
             <ul className="space-y-3 mb-8">
               <li className="flex items-center text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-green-400 mr-3" />
-                100 recherches fiscales / mois
+                Audit stratégique commercial
               </li>
               <li className="flex items-center text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-green-400 mr-3" />
-                25 consultations automatisées
+                Structuration de l'offre
               </li>
               <li className="flex items-center text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-green-400 mr-3" />
-                Casus Genius illimité
+                Organisation optimale de la force de vente
               </li>
               <li className="flex items-center text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-green-400 mr-3" />
-                Historique des requêtes exportable en Word ou PDF
+                Méthodes de vente et outils intégrés
               </li>
               <li className="flex items-center text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-green-400 mr-3" />
-                Support prioritaire (réponse sous 24h)
+                Pilotage et animation du déploiement
               </li>
             </ul>
             <button className="w-full bg-gradient-to-r from-purple-500 to-purple-600 text-white py-3 rounded-lg font-bold">
-              Commencer maintenant
+              Demander un audit gratuit
             </button>
           </motion.div>
 
-          {/* Business */}
+          {/* Recrutement & Formation */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -345,26 +335,30 @@ function TabletApp() {
             whileHover={{ scale: 1.02, boxShadow: "0 10px 40px rgba(59,130,246,0.15)" }}
             className="bg-gray-800/50 border border-gray-700 rounded-2xl p-8 backdrop-blur-sm"
           >
-            <h3 className="text-2xl font-bold text-white mb-1">Business</h3>
-            <div className="text-gray-300 mb-4">Pour les équipes et les professionnels exigeants</div>
-            <div className="text-4xl font-bold text-blue-400 mb-6">Sur mesure</div>
-            <p className="text-gray-300 mb-8">Prenez rendez-vous avec l'un de nos experts, établissez un devis sur mesure en fonction de vos besoins</p>
+            <h3 className="text-2xl font-bold text-white mb-1">Recrutement & Formation</h3>
+            <div className="text-gray-300 mb-4">Équipes de vente 100% opérationnelles</div>
+            <div className="text-4xl font-bold text-blue-400 mb-6">Sur devis</div>
+            <p className="text-gray-300 mb-8">Recrutement personnalisé et formation complète pour intégrer rapidement de nouveaux talents commerciaux</p>
             <ul className="space-y-3 mb-8">
               <li className="flex items-center text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-green-400 mr-3" />
-                Volume illimité
+                Recherche de profils sur mesure
               </li>
               <li className="flex items-center text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-green-400 mr-3" />
-                API & intégrations
+                Formation interne selon vos process
               </li>
               <li className="flex items-center text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-green-400 mr-3" />
-                Support dédié
+                Formation financée par OPCO
+              </li>
+              <li className="flex items-center text-gray-300">
+                <CheckCircle2 className="w-5 h-5 text-green-400 mr-3" />
+                Intégration 100% opérationnelle
               </li>
             </ul>
             <button className="w-full bg-blue-500 text-white py-3 rounded-lg font-semibold">
-              Choisir Business
+              Nous contacter
             </button>
           </motion.div>
         </div>
@@ -376,7 +370,7 @@ function TabletApp() {
   // SOLUTIONS SECTION
   // ==================================================================================
   const SolutionsSection = () => (
-    <section id="solutions" className="py-20 bg-black relative overflow-hidden">
+    <section id="services" className="py-20 bg-black relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
@@ -394,15 +388,15 @@ function TabletApp() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Découvrez les modules Casus
+            Nos services d'expertise commerciale
           </h2>
           <p className="text-xl text-gray-300">
-            Une suite complète d'outils IA pour révolutionner votre approche du conseil fiscal
+            Une approche complète pour optimiser votre process de vente de la stratégie à la mise en œuvre
           </p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-8">
-          {/* Casus Research */}
+          {/* Conseil Commercial */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -411,30 +405,30 @@ function TabletApp() {
           >
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mr-4">
-                <Search className="w-6 h-6 text-purple-400" />
+                <BarChart3 className="w-6 h-6 text-purple-400" />
               </div>
-              <h3 className="text-2xl font-bold text-white">Casus Research</h3>
+              <h3 className="text-2xl font-bold text-white">Conseil Commercial</h3>
             </div>
             <p className="text-gray-300 mb-6">
-              Recherches fiscales automatisées avec analyse contextuelle et recommandations personnalisées.
+              Analyse de votre problématique commerciale et élaboration d'une stratégie personnalisée pour amplifier vos performances.
             </p>
             <ul className="space-y-3">
               <li className="flex items-center text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-green-400 mr-3" />
-                Interface et sécurité
+                Diagnostic terrain complet
               </li>
               <li className="flex items-center text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-green-400 mr-3" />
-                Gain de temps
+                Stratégie commerciale sur mesure
               </li>
               <li className="flex items-center text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-green-400 mr-3" />
-                Interface intuitive
+                Plan d'action opérationnel
               </li>
             </ul>
           </motion.div>
 
-          {/* Casus Genius */}
+          {/* Prospection Externalisée */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -443,30 +437,30 @@ function TabletApp() {
           >
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mr-4">
-                <Brain className="w-6 h-6 text-blue-400" />
+                <Search className="w-6 h-6 text-blue-400" />
               </div>
-              <h3 className="text-2xl font-bold text-white">Casus Genius</h3>
+              <h3 className="text-2xl font-bold text-white">Prospection Externalisée</h3>
             </div>
             <p className="text-gray-300 mb-6">
-              Assistant IA expert qui comprend vos questions et fournit des réponses fiscales précises.
+              Ciblage, pitch de vente, roadmap et funnel de vente. Un flux régulier de rendez-vous qualifiés pour votre agenda.
             </p>
             <ul className="space-y-3">
               <li className="flex items-center text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-green-400 mr-3" />
-                Réponses instantanées
+                Business developer dédié
               </li>
               <li className="flex items-center text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-green-400 mr-3" />
-                Expertise approfondie
+                400-800 appels mensuels ciblés
               </li>
               <li className="flex items-center text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-green-400 mr-3" />
-                Mise à jour continue
+                Reporting hebdomadaire
               </li>
             </ul>
           </motion.div>
 
-          {/* Casus Draft */}
+          {/* Recrutement Commercial */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -476,64 +470,64 @@ function TabletApp() {
           >
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mr-4">
-                <FileText className="w-6 h-6 text-green-400" />
+                <Brain className="w-6 h-6 text-green-400" />
               </div>
-              <h3 className="text-2xl font-bold text-white">Casus Draft</h3>
+              <h3 className="text-2xl font-bold text-white">Recrutement Commercial</h3>
             </div>
             <p className="text-gray-300 mb-6">
-              Génération automatique de consultations fiscales professionnelles et personnalisées.
+              Recrutement de votre équipe de vente selon des critères personnalisés et formation pour une intégration 100% opérationnelle.
             </p>
             <ul className="space-y-3">
               <li className="flex items-center text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-green-400 mr-3" />
-                Rédaction automatique
+                Recherche de profils sur mesure
               </li>
               <li className="flex items-center text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-green-400 mr-3" />
-                Format professionnel
+                Formation interne complète
               </li>
               <li className="flex items-center text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-green-400 mr-3" />
-                Personnalisation complète
+                Intégration opérationnelle
               </li>
             </ul>
           </motion.div>
 
-          {/* Casus Analyse - NOUVEAU */}
+          {/* Formation Commerciale */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="bg-gradient-to-br from-orange-500/10 to-orange-600/5 border-2 border-green-500/40 rounded-2xl p-8 backdrop-blur-sm relative"
+            className="bg-gradient-to-br from-orange-500/10 to-orange-600/5 border-2 border-orange-500/40 rounded-2xl p-8 backdrop-blur-sm relative"
           >
             <div className="absolute -top-3 -right-3">
-              <div className="bg-gradient-to-r from-green-500 to-green-600 text-white px-3 py-1 rounded-full text-sm font-bold">
-                🆕 NOUVEAU
+              <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-3 py-1 rounded-full text-sm font-bold">
+                ⭐ POPULAIRE
               </div>
             </div>
             
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mr-4">
-                <BarChart3 className="w-6 h-6 text-orange-400" />
+                <FileText className="w-6 h-6 text-orange-400" />
               </div>
-              <h3 className="text-2xl font-bold text-white">Casus Analyse</h3>
+              <h3 className="text-2xl font-bold text-white">Formation Commerciale</h3>
             </div>
             <p className="text-gray-300 mb-6">
-              Analysez vos liasses fiscales avec l'IA. Détection automatique des optimisations et sécurisation de vos analyses.
+              Formation de vos équipes de vente aux meilleures méthodes commerciales et à la maîtrise des pratiques digitales.
             </p>
             <ul className="space-y-3">
               <li className="flex items-center text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-green-400 mr-3" />
-                Analyse automatique des liasses
+                Méthodes commerciales 3.0
               </li>
               <li className="flex items-center text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-green-400 mr-3" />
-                Détection d'optimisations
+                Formation financée par OPCO
               </li>
               <li className="flex items-center text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-green-400 mr-3" />
-                Sécurisation fiscale
+                Consultant dédié
               </li>
             </ul>
           </motion.div>
@@ -558,7 +552,7 @@ function TabletApp() {
       
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid md:grid-cols-3 gap-8">
-          {/* Gain de temps */}
+          {/* Gain de temps précieux */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -568,14 +562,14 @@ function TabletApp() {
             <div className="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center mb-6">
               <Clock className="w-6 h-6 text-white" />
             </div>
-            <h3 className="text-2xl font-bold text-white mb-2">Gain de temps</h3>
+            <h3 className="text-2xl font-bold text-white mb-2">Gain de temps précieux</h3>
             <p className="text-gray-300 text-sm mb-4">(Libérez vos ressources et concentrez-vous sur l'essentiel.)</p>
             <p className="text-gray-300">
-              Diminuez de 60 % le temps consacré aux recherches et à la rédaction de vos conseils fiscaux.
+              La régularité est une des clés de réussite : vous avez l'assurance d'un temps uniquement consacré à la prospection.
             </p>
           </motion.div>
 
-          {/* Sécurité & Conformité */}
+          {/* Vraie expertise */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -586,14 +580,14 @@ function TabletApp() {
             <div className="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center mb-6">
               <ShieldCheck className="w-6 h-6 text-white" />
             </div>
-            <h3 className="text-2xl font-bold text-white mb-2">Sécurité & Conformité</h3>
-            <p className="text-gray-300 text-sm mb-4">(Recherchez en toute sécurité, garantissez votre conformité)</p>
+            <h3 className="text-2xl font-bold text-white mb-2">Vraie expertise</h3>
+            <p className="text-gray-300 text-sm mb-4">(Bénéficiez d'une équipe expérimentée et aguerrie)</p>
             <p className="text-gray-300">
-              Assurez la sécurité et la conformité de vos données avec notre infrastructure hébergée et protégée en France
+              Vous bénéficiez de l'appui d'une équipe expérimentée, aguerrie aux méthodes traditionnelles de prospection et aux dernières pratiques digitales.
             </p>
           </motion.div>
 
-          {/* Interface intuitive */}
+          {/* Optimisation des coûts */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -604,10 +598,10 @@ function TabletApp() {
             <div className="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center mb-6">
               <Monitor className="w-6 h-6 text-white" />
             </div>
-            <h3 className="text-2xl font-bold text-white mb-2">Interface intuitive</h3>
-            <p className="text-gray-300 text-sm mb-4">(Une ergonomie pensée pour une utilisation simple et efficace)</p>
+            <h3 className="text-2xl font-bold text-white mb-2">Optimisation des coûts</h3>
+            <p className="text-gray-300 text-sm mb-4">(Maîtrisez parfaitement vos coûts opérationnels)</p>
             <p className="text-gray-300">
-              Profitez d'une plateforme ergonomique, conçue spécialement pour les professionnels exigeants.
+              Vous évitez les coûts fixes d'une équipe interne et bénéficiez de toutes nos ressources avec un contrôle total sur vos budgets.
             </p>
           </motion.div>
         </div>
@@ -640,31 +634,31 @@ function TabletApp() {
             Ils nous font confiance
           </h2>
           <p className="text-xl text-gray-300">
-            Plus de 500 experts-comptables utilisent déjà Casus
+            Plus de 200 fondateurs et dirigeants ont transformé leur approche commerciale avec UP UP UP
           </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
-              name: "Kadi SEYDI",
-              role: "Expert-Comptable",
-              company: "Beyond Numbers",
-              content: "Depuis quelques mois, j'ai intégré Casus à ma pratique quotidienne d'expert-comptable. Il s'agit d'une IA spécialisée dans l'analyse fiscale. Résultat ? Une capacité décuplée à modéliser, comparer, anticiper les conséquences fiscales de différentes options pour mes clients. En quelques minutes, je peux aider mes clients à mieux comprendre les options qui s'offrent à eux, et surtout à saisir les risques et opportunités qui pointent à l'horizon. C'est rapide, clair et incroyablement pédagogique !",
+              name: "Marc Dubois",
+              role: "Fondateur & CEO",
+              company: "TechStart",
+              content: "UP UP UP nous a permis de structurer notre approche commerciale et de multiplier nos rendez-vous qualifiés par 3. Leur expertise en prospection externalisée nous a fait gagner un temps précieux et nous a permis de nous concentrer sur notre cœur de métier. Une équipe professionnelle et des résultats concrets !",
               rating: 5
             },
             {
-              name: "Jean Martin",
-              role: "Avocat Fiscaliste",
-              company: "Cabinet Martin & Associés",
-              content: "L'IA de Casus nous permet de proposer un service premium à nos clients. Indispensable !",
+              name: "Sarah Chen",
+              role: "Co-fondatrice",
+              company: "InnovateLab",
+              content: "L'accompagnement d'UP UP UP a transformé notre force de vente. Leur recrutement et formation nous ont permis d'intégrer des commerciaux 100% opérationnels en quelques semaines. Un investissement qui se rentabilise rapidement !",
               rating: 5
             },
             {
-              name: "Sophie Laurent",
-              role: "Expert-Comptable",
-              company: "Laurent Conseil",
-              content: "Interface intuitive et résultats bluffants. Nos clients sont impressionnés par notre réactivité.",
+              name: "Thomas Moreau",
+              role: "Fondateur",
+              company: "ScaleUp Solutions",
+              content: "Le conseil commercial d'UP UP UP nous a aidés à optimiser notre process de vente de A à Z. Leur diagnostic terrain et leur stratégie personnalisée ont boosté nos performances commerciales de manière significative.",
               rating: 5
             }
           ].map((testimonial, index) => (
@@ -704,24 +698,24 @@ function TabletApp() {
           {/* Logo */}
           <div className="flex justify-center mb-6">
             <img 
-              src="/logo-casus.jpeg" 
-              alt="Casus Logo" 
-              className="w-auto h-12 object-contain"
+              src="/logo-upupupfinal.png" 
+              alt="UP UP UP Logo" 
+              className="w-auto h-40 object-contain"
             />
           </div>
           
           {/* Tagline */}
           <p className="text-xl text-gray-300 mb-4">
-            L'IA experte qui optimise vos conseils
+            L'expertise commerciale qui transforme votre business
           </p>
           <p className="text-gray-400 mb-8">
-            Chez Casus, nous sommes une équipe de professionnels du droit passionnés et de spécialistes de l'IA dont la mission est de révolutionner la façon dont les conseils fiscaux sont fournis
+            Chez UP UP UP, nous sommes une équipe de professionnels du commerce passionnés dont la mission est d'optimiser votre process de vente de la stratégie à sa mise en œuvre opérationnelle
           </p>
           
           {/* Contact */}
           <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8 mb-8">
             <a 
-              href="https://www.linkedin.com/company/wearecasus/" 
+              href="https://www.linkedin.com/company/upupup.pro/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition-colors flex items-center"
@@ -734,18 +728,18 @@ function TabletApp() {
               LinkedIn
             </a>
             <a 
-              href="mailto:adam.telmat@wearecasus.co"
+               href="mailto:adam.telmat@upupup.pro"
               className="text-gray-400 hover:text-white transition-colors flex items-center"
             >
               <MessageCircle className="w-5 h-5 mr-2" />
-              adam.telmat@wearecasus.co
+              adam.telmat@upupup.pro
             </a>
           </div>
           
           {/* Copyright */}
           <div className="pt-8 border-t border-gray-800">
             <p className="text-gray-500">
-              © 2025 Casus. Tous droits réservés.
+              © 2025 UP UP UP. Tous droits réservés.
             </p>
           </div>
         </div>

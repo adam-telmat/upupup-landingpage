@@ -1,0 +1,143 @@
+UP UP UP — Faits et promesse
+Qui: Cabinet marseillais de stratégie commerciale digitalisée spécialisé en externalisation de prospection B2B et structuration commerciale.
+
+Valeur clé: Obtenir des rendez-vous qualifiés en continu grâce à une prospection téléphonique experte, orchestrée avec social selling, email, CRM, et reporting ROI, sur des missions intensives de 3 mois.
+
+Différenciation:
+
+Prospection téléphonique ciblée menée par un business developer dédié, basé en France.
+
+Offre packagée avec 400–800 appels/mois selon forfait, 300 leads qualifiés offerts/mois, démarrage en 4 semaines.
+
+Workflow 5 étapes: Audit → Set‑up → Prospection (1000 appels/3 mois) → Suivi → Reporting hebdo/mensuel, handoff au closing côté client.
+
+Preuves/éléments concrets:
+
+Reporting hebdomadaire 30 min + revue stratégique mensuelle 1h–1h30, data quotidienne en accès libre, suivi CRM/Excel.
+
+Positionnement “qualité sur quantité”, scripts personnalisés, funnel de vente, roadmap, OKR/KPI.
+
+Données légales (si besoin de crédibilité bas de page):
+
+SASU, SIREN 914 649 041, créée le 03/06/2022, siège 30 rue Neuve Sainte‑Catherine, 13007 Marseille.
+
+Persona cible — Fondateur/Co‑fondateur B2B
+Rôle: CEO/Co‑founder de startup/PME B2B (5–50 employés), souvent tech‑first, qui doit accélérer l’acquisition sans recruter une équipe interne complète.
+
+Pains:
+
+Pipeline irrégulier, dépendance au réseau, CAC en hausse, time‑to‑value trop long.
+
+Manque de temps/ressources pour une prospection structurée et régulière.
+
+Objectifs:
+
+Générer des rendez‑vous qualifiés prévisibles sous 30 jours, maîtriser le budget d’acquisition, démontrer des KPI aux investisseurs/au board.
+
+Objections:
+
+“Le phoning ça ne marche plus” → réponse: mix phoning + email + LinkedIn orchestrés, scripts personnalisés, itérations hebdo.
+
+“On n’a pas de ressources internes” → réponse: business developer dédié, set‑up complet, reporting et suivi clés en main.
+
+Instructions pour la landing — structure et contenus à adapter
+Hero section (au‑dessus du pli)
+
+Pré‑titre: “Pour fondateurs/cofondateurs B2B”
+
+Titre: “Des rendez‑vous qualifiés en 30 jours, sans recruter en interne”
+
+Sous‑titre: “Prospection téléphonique + social selling + email, pilotés aux KPI, avec un business developer dédié”
+
+CTA principal:
+
+Variante lead‑gen (emailing): mini‑formulaire 3–4 champs “Obtenir mon plan d’action gratuit”
+
+Variante click‑through (LinkedIn): bouton “Voir le plan d’action” ancre vers formulaire
+
+Trust strip: “400–800 appels ciblés/mois - 300 leads qualifiés offerts/mois - Démarrage en 4 semaines”.
+
+Logos/Preuves rapides
+
+Partenariats/secteurs + micro‑résultats: “+X% de RDV en 90 jours - ROI 150% sous 6 mois (exemples clients)”.
+
+Section “Pourquoi ça marche”
+
+3 bénéfices:
+
+“ICP précis et scripts personnalisés” → plus de réponses utiles.
+
+“Orchestration phoning + LinkedIn + email” → conversations qualifiées.
+
+“Pilotage hebdo aux KPI” → itération rapide et ROI maîtrisé.
+
+Bullets features: funnel CRM, 300 leads/mois offerts, 400–800 appels/mois, reporting hebdo + mensuel.
+
+“Comment on procède” (process en 5 étapes)
+
+Audit: enjeux, cibles, positioning; plan d’action 3 ans; KPI/OKR.
+
+Set‑up: scripts, fichiers qualifiés, dashboards, CRM/funnel.
+
+Prospection: 1000 appels en 3 mois, suivi et relances, tracking.
+
+Suivi: synchronisation RDV/démos, CRM/Excel, relances.
+
+Reporting: data quotidienne, hebdo 30 min, mensuel 1h–1h30.
+
+CTA secondaire: “Voir un exemple de scripts”
+
+Témoignages/chiffres
+
+2–3 cartes avec métriques: “+XX RDV en 8 semaines”, “ROI 150% à 6 mois”, “pipeline x2” (anonymisés si nécessaire).
+
+Offre/Formulaire
+
+Titre: “Recevez un plan d’action personnalisé en 48h”
+
+Champs: prénom, email pro, société, taille (select)
+
+Mentions: consentement RGPD, “aucune prospection sans accord”
+
+CTA: “Obtenir mon plan d’action”
+
+Micro‑proof sous CTA: “Business developer dédié basé en France - Contrat 3 mois renouvelable”.
+
+FAQ objections
+
+“Combien de temps pour voir des résultats ?” → 2–4 semaines selon ICP.
+
+“Phoning obligatoire ?” → mix selon persona et marché.
+
+“Engagement ?” → contrat court 3 mois, démarrage en 4 semaines.
+
+“Outils ?” → intégration CRM ou suivi simple fourni; reporting inclus.
+
+Footer
+
+Coordonnées: 30 Rue Neuve Ste‑Catherine, 13007 Marseille; 0805 389 781.
+
+Mentions: SASU SIREN 914 649 041, NAF 6201Z.
+
+Variantes de message selon source
+Email cold (fondateurs scrappés): garder le même wording que l’objet/1er paragraphe dans le H1; mettre le formulaire dans le hero pour réduire la friction.
+
+LinkedIn Ads: version “click‑through” avec CTA hero qui scroll vers formulaire, proof‑bar dès le dessus du pli pour trafic froid.
+
+Bonus pour IA — assets et paramètres
+Ton/Style: direct B2B, orienté résultats, crédible/humain (éviter jargon creux).
+
+CTA labels: “Obtenir mon plan d’action gratuit” / “Parler à un expert” / “Voir le plan d’action”.
+
+UTM: ajouter utm_source/utm_campaign auto selon variante (email vs linkedin).
+
+Vitesse mobile: visuels légers, pas de vidéo auto‑play.
+
+Accessibilité: contrastes forts, labels de champs clairs.
+
+Données de contact à intégrer
+Marseille: 30 Rue Neuve Sainte‑Catherine, 13007 — 0805 389 781.
+
+Paris: 15 rue Traversière, 75012 — 0805 389 781 (si utile pour crédibilité multi‑site).
+
+Avec ces éléments, une IA peut adapter ton template en une landing alignée à 100% avec l’offre réelle d’UP UP UP, ciblée “fondateurs”, et prête à convertir depuis tes emails/outbound LinkedIn. Chaque point ci‑dessus provient des pages officielles et registres légaux d’UP UP UP pour garantir la précision du positionnement, des promesses et des détails opérationnels.
